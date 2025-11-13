@@ -8,7 +8,6 @@ from flask import jsonify, request, make_response, abort, url_for   # noqa; F401
 from service.models import Account
 from service.common import status  # HTTP Status Codes
 from . import app  # Import Flask application
-import json
 
 
 ############################################################
@@ -79,7 +78,8 @@ def list_accounts():
 
     app.logger.info("Returning [%s] accounts", len(account_list))
     return jsonify(account_list), status.HTTP_200_OK
-    
+
+
 ######################################################################
 # READ AN ACCOUNT
 ######################################################################
