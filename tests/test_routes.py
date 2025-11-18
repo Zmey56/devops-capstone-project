@@ -6,7 +6,6 @@ Test cases can be run with the following:
   coverage report -m
 """
 import os
-import json
 import logging
 from unittest import TestCase
 from tests.factories import AccountFactory
@@ -190,4 +189,3 @@ class TestAccountService(TestCase):
         }
         for key, value in headers.items():
             self.assertEqual(response.headers.get(key), value)
-
